@@ -1,0 +1,37 @@
+<!-- MUST TYPE THIS IS BELOW BY HAND OR IT WONT WORK
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    browser-sync start --server --directory --files "*" ("**/*" for all folders/files in directory)
+    
+    OR USE
+    http://localhost:3000/index.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    
+    h1{
+        text-align:center
+    }
+
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <h1>Inspect the page to see functions in action</h1>
+    <script>
+        console.log(factorize(20))
+        console.log(findUnique("Hello World"))
+        console.log(doOperation(3,4, multiply))
+        console.log(doOperation(3,4, power))
+
+    </script>
+
+
+</body>
+
+
+</html>
