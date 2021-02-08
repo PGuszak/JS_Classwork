@@ -1,3 +1,3 @@
-***There are branches on this for all classworks***
+# There are branches for all classworks
 
-Just go into each branch to see that classworks folder and files
+Just go into each branch for each specific classworks folder and files
