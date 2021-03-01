@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Left off on minute 18:20 of JS CW 2: need to re-format Part 1-->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -20,132 +21,91 @@
       <h4 style ="text-align:center" class="d-block p-2 bg-dark text-white">Please fill out this form</h4>
       <!-- user info: first, last name, sex, phone, email, address, DOB-->
       <article>
-        <form>
+        <form onsubmit="return validateForm()" id="mainForm" novalidate>
           <!-- Part 1: USER INFORMATION-->
           <fieldset class="border border-primary">
             <legend style ="text-align:center" class="w-auto">Part 1: Patient Information</legend>
             
-            <div class="w-auto form-group row">
-
-              <!--First Name-->
-              <div style=" white-space: nowrap;" class="centermain col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <label for="txtFirstname" class=" gender col-form-label">
-                  <span> First name: </span>
-                </label>
-              </div>
-
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <input type="text" id="txtFirstname" name="txtFirstname" class="form-control" placeholder="First Name" required/>
-              </div>
-
-              <!--Last Name-->
-              <div style="white-space: nowrap;" class="centermain col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <label for="txtLastname" class="col-form-label">
-                  <span> Last name: </span>
-                </label>
-              </div>
-
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <input type="text" id="txtLastname" name="txtLastname" class="form-control" placeholder="Last Name" required/>
-              </div>
-            </div>  
-
-            <div class="w-auto form-group row">
-              <!--Phone-->
-              <div style="white-space: nowrap;" class="centermain col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <label id="txtTel" class="col-sm-2 col-form-label">
-                  <span>Telephone:</span>
-                </label>
-              </div>
-              
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <input type="tel" id="txtTelephone" name="txtTelephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="444-444-4444" required>
-              </div>
-
-            <!--Email-->
-              <div style="white-space: nowrap;" class="centermain col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <label id="txtEmail" class="col-sm-2 col-form-label">
-                  <span>Email:</span>
-                </label>
-              </div>
-              
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <input type="email" id="txtEmailinput" name="txtEmail" class="form-control" placeholder="name@examle.com" required>
-              </div>
-            </div>
-
-            <div class="w-auto form-group row">
-
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                  <div class="center col-lg-12 col-md-3 col-sm-6 col-xs-6 col-form-label">
-                  <span>Gender:</span> 
-                  </div>                
-              </div>
-
-              <!--Radio Buttons-->
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                  <div class="form-check">
-                    <input type="radio"  id="rbMale" name="gender"  value="male"  class="form-check-input"/>
-                    <label for="rbMale" class="form-check-label">Male</label>
-                  </div>
-
-                  <div class="form-check">
-                    <input type="radio" id="rbFemale" name="gender" value="female" class="form-check-input"/>
-                    <label for="rbFemale">Female</label>
-                  </div>
-
-                  <div class="form-check">
-                    <input type="radio" id="rbOther" name="gender" value="other" class="form-check-input"/>
-                    <label for="rbOther">Other</label>
-                  </div>
-
-                  <div class="form-check">
-                    <input
-                      type="radio" id="rbPreferNo" name="gender" value="PreferNo" class="form-check-input"/>
-                    <label for="rbPreferNo">Prefer Not to Answer</label>
-                  </div>
-              </div>
-
-              <!--DOB-->
-              <div style="white-space: nowrap;" class="center col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <label for="txtDOB" class="col-sm-2 col-form-label">
-                  Date of Birth:
-                </label>
-              </div>
-
-              <div class="center col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <input type="date" name="txtDOB" id="txtDOB" class="form-control" required />
-              </div>
-            </div>
-          
-            
-            <!--Address-->
-            <div class="row form-group">
-
-                <label style="white-space: nowrap;" for="txtAddress" class="centermain col-lg-3 col-md-3 col-sm-8 col-xs-8 col-form-label">
-                  <span>Address:</span>
-                </label>
-              
-                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-                  <input type="text" id="txtAddress" name="txtAddress" class="form-control"
-                      placeholder="Street" required>
+            <fieldset class="border">
+              <legend class="w-auto">Part 1: Patient Information</legend>
+              <div class="form-group row">
+                <div class="col-sm-2">
+                  <label for="txtFirstName" class="col-form-label">
+                    <span>First name: </span>
+                  </label>
                 </div>
-
-              <div class="col-lg-2 col-md-12 col-sm-12 col-12">
+                <div class="col-sm-10">
+                  <input type="text" id="txtFirstName" name="txtFirstName" required class="form-control" placeholder="First Name" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-2">
+                  <label for="txtLastName" class="col-form-label">
+                    <span>Last name: </span>
+                  </label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="txtLastName" name="txtLastName" required class="form-control" placeholder="Last Name" required>
+                </div>
+              </div>
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-sm-2 col-form-label">Gender: </legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input type="radio" id="rbMale" name="gender" value="male" class="form-check-input">
+                      <label for="rbMale" class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" id="rbFemale" name="gender" value="female" class="form-check-input">
+                      <label for="rbFemale" class="form-check-label">Female</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" id="rbOther" name="gender" value="other" class="form-check-input">
+                      <label for="rbOther" class="form-check-label">Other</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="row form-group">
+                <label for="txtTel" class="col-sm-2 form-label">Telephone: </label>
+                <div class="col-sm-10">
+                  <input type="tel" id="txtTel" name="txtTel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="000-000-0000">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="txtEmail" class="col-sm-2 col-form-label">
+                  <span>Email: </span>
+                </label>
+                <div class="col-sm-10">
+                  <input type="email" id="txtEmail" name="txtEmail" required class="form-control" placeholder="example@email.com" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="txtAddress" class="col-sm-2 col-form-label">Address: </label>
+                <div class="col-sm-12 col-lg-6">
+                  <input type="text" id="txtAddress" name="txtAddress" class="form-control" placeholder="Street">
+                </div>
+                <div class="col">
                   <input type="text" id="txtCity" name="txtCity" class="form-control" placeholder="City">
-              </div>
-
-              <div class="col-lg-2 col-md-12 col-sm-12 col-12">
+                </div>
+                <div class="col-sm-7">
                   <input type="text" id="txtState" name="txtState" class="form-control" placeholder="State">
+                </div>
+                <div class="col-sm-7">
+                  <input type="text" id="txtZip" name="txtZip" class="form-control" placeholder="ZIP" pattern="[0-9]{5}">
+                </div>
               </div>
-
-              <div class="col-lg-2 col-md-12 col-sm-12 col-12">
-                  <input type="text" id="txtZipCode" name="txtZipCode" class="form-control"
-                      placeholder="ZipCode" pattern="[0-9]{5}">
+              <div class="row form-group">
+                <label for="txtDOB" class="col-sm-2 col-form-label">
+                  <span>Date of Birth: </span>
+                </label>
+                <div class="col-sm-10">
+                  <input type="date" id="txtDOB" name="txtDOB" required class="hasError form-control">
+                  <div id="divDoBError" class="col-sm-5 invisible errorMessage"></div>
+                </div>
               </div>
-            </div>
-            
-          </fieldset>
+            </fieldset>
 
 
           <!--Part 2: Symptoms Questions-->
@@ -359,20 +319,20 @@
               </div>  
 
               <div class= "col-lg-1 col-md-1 col-sm-6 col-xs-6">
-                <select id="ddTravelCountry" name="ddCountry" class="form-control">
+                <select id="ddCountry" name="ddCountry" class="form-control" onchange="updateCountryView()">
                   <option value="No" selected>No</option>
                   <option value="Yes">Yes</option>
                 </select>
               </div>
 
-
-              <div style="text-align: center;" class="col-lg-5 col-md-3 col-sm-6 col-xs-6">
-                <label for="txtCountry">
+              <!--if yes above which countries-->
+              <div id="travelcountryQuestion" style="text-align: center;" class="invisible col-lg-5 col-md-3 col-sm-6 col-xs-6">
+                <label for="txtCountry" id="labelCountry">
                   <span>Which Countries? (seperate with comma)</span>
                 </label>
               </div>
 
-              <div class= "col-lg-1 col-md-1 col-sm-6 col-xs-6">     
+              <div id="txtCountry" class="invisible col-lg-1 col-md-1 col-sm-6 col-xs-6">     
                 <input type="text" id="txtCountry" required class="form-control" placeholder="Country">
               </div>
             </div>
@@ -410,7 +370,7 @@
 
           <!--SUBMIT-->
           <br><div>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
           </div>
         </form>

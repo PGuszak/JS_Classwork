@@ -9,7 +9,20 @@ fieldset{
 
 .gender{
   line-height: 200px;
-  text-align: center;
+  text-align: left;
+}
+
+  
+.invisible {
+	display: none;
+}
+
+.errorMessage {
+	color: red;
+}
+
+.hasError {
+	background-color: yellow;
 }
 
 .center {
