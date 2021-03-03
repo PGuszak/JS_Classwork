@@ -14,8 +14,16 @@ function updateCountryView(){
 }
 
 function validateForm() {
+<<<<<<< Updated upstream
 
     var DoB = document.getElementById("txtDOB"); //why doesn't qeuery selector work????
+=======
+    //quereyselector for id's use hash
+    //if issue print variable using console.log
+    //alaways get whole element first
+    var DoB = document.querySelector("#txtDOB");  //some query
+    //console.log(DoB);
+>>>>>>> Stashed changes
     var divDoBError = document.getElementById("divDoBError")
     var formIsValid = true;
     if (DoB.value == "") {
