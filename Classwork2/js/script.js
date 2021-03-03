@@ -14,8 +14,11 @@ function updateCountryView(){
 }
 
 function validateForm() {
-
-    var DoB = document.getElementById("txtDOB");
+    //quereyselector for id's use hash
+    //if issue print variable using console.log
+    //alaways get whole element first
+    var DoB = document.querySelector("#txtDOB");  //some query
+    console.log(DoB);
     var divDoBError = document.getElementById("divDoBError")
     var formIsValid = true;
     if (DoB.value == "") {
@@ -77,3 +80,5 @@ function validateForm() {
 
     return formIsValid;
 }
+
+
