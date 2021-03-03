@@ -1,5 +1,17 @@
+.invisible {
+  display: none;
+}
+.errorMessage {
+  color: red;
+}
+.hasError {
+  background-color: yellow;
+}
+
+
+/*My css for my styles*/
 legend{
-  color: white;
+  color: black;
   padding: 5px 10px;
 }
 
@@ -12,19 +24,6 @@ fieldset{
   text-align: left;
 }
 
-  
-.invisible {
-	display: none;
-}
-
-.errorMessage {
-	color: red;
-}
-
-.hasError {
-	background-color: yellow;
-}
-
 .center {
   height: 5em;
   display: flex;
@@ -35,4 +34,7 @@ fieldset{
 .centermain {
   text-align: center;
   white-space: nowrap;
+}
+.visible {
+  display: block;
 }
