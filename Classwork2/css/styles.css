@@ -1,5 +1,17 @@
+.invisible {
+  display: none;
+}
+.errorMessage {
+  color: red;
+}
+.hasError {
+  background-color: yellow;
+}
+
+
+
 legend{
-  color: white;
+  color: black;
   padding: 5px 10px;
 }
 
@@ -10,19 +22,6 @@ fieldset{
 .gender{
   line-height: 200px;
   text-align: left;
-}
-
-  
-.invisible {
-	display: none;
-}
-
-.errorMessage {
-	color: red;
-}
-
-.hasError {
-	background-color: yellow;
 }
 
 .center {
